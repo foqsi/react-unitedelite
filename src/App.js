@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Agents from "./components/Agents.jsx";
+import ContactUs from "./components/ContactUs.jsx";
+import Footer from "./components/Footer.jsx";
+import Home from "./components/Home.jsx";
+import Navbar from "./components/Navbar.jsx";
+import OurCrusade from "./components/OurCrusade.jsx";
+import OurLeadership from "./components/OurLeadership.jsx";
+import Services from "./components/Services.jsx";
+import WhoWeAre from "./components/WhoWeAre.jsx";
+import WhyUE from "./components/WhyUnitedElite.jsx";
+
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Home />
     </div>
   );
 }
