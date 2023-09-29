@@ -35,11 +35,13 @@ export default function Navbar() {
     return (
         <header className="bg-white">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-                <div className="flex lg:flex-1 items-center"> {/* Added items-center */}
+                <div className="flex lg:flex-1 items-center">
                     <a href="/" className="-m-1.5 p-1.5">
                         <img src={logo} alt="UE Logo" />
                     </a>
-                    <span className='hidden lg:flex text-yellow-500 font-bold tracking-widest text-2xl my-6 ml-4 drop-shadow-lg'>UNITED ELITE</span>
+                    <a href="/" className="hidden lg:flex text-yellow-500 font-bold tracking-widest text-2xl my-6 ml-4 drop-shadow-lg">
+                        UNITED ELITE
+                    </a>
                 </div>
                 <div className="flex lg:hidden">
                     <button
