@@ -56,19 +56,19 @@ export default function Home() {
 
 
                 {/* Arrow buttons */}
-                <div className="absolute top-[23%] left-0 p-4 ml-16">
+                <div className="hidden lg:grid absolute top-[23%] left-0 p-4 ml-16">
                     <button className="border border-amber-500 bg-amber-100 p-2 text-4xl" onClick={prevSlide}>
                         <ChevronLeftIcon className="w-8 h-8" />
                     </button>
                 </div>
-                <div className="absolute top-[23%] right-0 p-4 mr-16">
+                <div className="hidden lg:grid absolute top-[23%] right-0 p-4 mr-16">
                     <button className="border border-amber-500 bg-amber-100 p-2 text-4xl" onClick={nextSlide}>
                         <ChevronRightIcon className="w-8 h-8" />
                     </button>
                 </div>
 
                 {/* Circle buttons */}
-                <div className="absolute top-[48%] left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <div className="hidden lg:flex absolute top-[48%] left-1/2 transform -translate-x-1/2 space-x-2">
                     {slides.map((_, index) => (
                         <button
                             key={index}
@@ -79,14 +79,18 @@ export default function Home() {
                 </div>
 
                 {/* Image text */}
-                <div className="absolute bottom-[75%] left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <div className="hidden lg:flex absolute bottom-[75%] left-1/2 transform -translate-x-1/2 space-x-2">
                     <div className="text-center pointer-events-auto">
-                        <p className="text-amber-600 font-bold text-9xl border border-amber-300 bg-amber-200">{slides[currentIndex].text}</p>
-                        <button className="p-1 mt-4 text-7xl text-amber-600 border border-amber-300 bg-amber-200">{slides[currentIndex].buttonLabel}</button>
+                        <p className="text-yellow-500 font-bold text-9xl border border-amber-300 ">{slides[currentIndex].text}</p>
+                        <button className="p-1 mt-4 text-7xl font-bold text-yellow-500">{slides[currentIndex].buttonLabel}</button>
                     </div>
                 </div>
 
             </div>
+
+            {/* Cards */}
+
+
         </>
     );
 }

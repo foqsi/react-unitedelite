@@ -5,12 +5,17 @@ import {
     ArrowRightIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, ChatBubbleLeftRightIcon, LockClosedIcon } from '@heroicons/react/20/solid'
+import {
+    ChevronDownIcon,
+    ChatBubbleLeftRightIcon,
+    LockClosedIcon,
+    UserIcon
+} from '@heroicons/react/20/solid'
 
 import logo from '../assets/apple-icon-76x76.png';
 
 const pages = [
-    { name: 'Why United Elite', description: 'Learn Why United Elite', href: '#', icon: ArrowRightIcon },
+    { name: 'Why United Elite', description: 'Learn Why United Elite', href: '/', icon: ArrowRightIcon },
     { name: 'Who We Are', description: 'Learn about United Elite', href: '#', icon: ArrowRightIcon },
     { name: 'Our Crusade', description: 'Understand what we fight for', href: '#', icon: ArrowRightIcon },
     { name: 'Our Leadership', description: 'Learn about our leadership', href: '#', icon: ArrowRightIcon }
@@ -30,11 +35,11 @@ export default function Navbar() {
     return (
         <header className="bg-white">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-                <div className="flex lg:flex-1">
-                    <a href="#" className="-m-1.5 p-1.5">
+                <div className="flex lg:flex-1 items-center"> {/* Added items-center */}
+                    <a href="/" className="-m-1.5 p-1.5">
                         <img src={logo} alt="UE Logo" />
                     </a>
-                    {/* <span className='gold-text font-bold tracking-widest text-2xl my-6 ml-12 drop-shadow-lg'>UNITED ELITE</span> */}
+                    <span className='hidden lg:flex text-yellow-500 font-bold tracking-widest text-2xl my-6 ml-4 drop-shadow-lg'>UNITED ELITE</span>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -108,11 +113,13 @@ export default function Navbar() {
                         Contact Us
                     </a>
                 </Popover.Group>
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" className="hidden text-sm font-semibold leading-6 text-gray-900">
-                        Log in <span aria-hidden="true">&rarr;</span>
+                <div className="hidden lg:flex lg:flex-1 lg:justify-end flex-row">
+                    <a href="/login" className="text-sm font-semibold leading-6 text-gray-900 flex items-center">
+                        Log in <span aria-hidden="true"></span>
+                        <UserIcon className='h-5 w-5 text-gray-600 ml-1' />
                     </a>
                 </div>
+
             </nav>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                 <div className="fixed inset-0 z-10" />
@@ -154,7 +161,7 @@ export default function Navbar() {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
-                                                        className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                        className="block border-b-2 bottom rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                                     >
                                                         {item.name}
                                                     </Disclosure.Button>
@@ -184,7 +191,7 @@ export default function Navbar() {
                             </div>
                             <div className="py-6">
                                 <a
-                                    href="#"
+                                    href="/login"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Log in
