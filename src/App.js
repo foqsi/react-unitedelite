@@ -34,7 +34,7 @@ function App() {
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/login' element={<Login />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
 
     </div>
   );
