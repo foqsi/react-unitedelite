@@ -22,5 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-
-src/data/data.js
+src/data/agentdata.js
+src/data/mainpagedata.js
